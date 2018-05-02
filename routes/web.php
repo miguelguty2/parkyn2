@@ -20,25 +20,31 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index');
 
+Route::resource('vehiculos', 'VehiculosController');
 
-Route::resource('roles', 'RolesController');
+Route::resource('vehiculos', 'VehiculosController');
 
-Route::resource('usuariosRols', 'UsuariosRolController');
+Route::resource('puestos', 'PuestosController');
 
-Route::resource('usuarios', 'UsuariosController');
 
-Route::resource('estados', 'EstadosController');
 
-Route::resource('tipoConceptos', 'TipoConceptosController');
 
-Route::resource('conceptos', 'ConceptosController');
 
-Route::resource('permisos', 'PermisosController');
 
-Route::resource('valoresConceptos', 'ValoresConceptoController');
+Route::resource('prestamos', 'PrestamosController');
 
-Route::resource('tipoIdentificacions', 'TipoIdentificacionController');
+Route::resource('prestamos', 'PrestamosController');
 
-Route::resource('personas', 'PersonasController');
+Route::resource('facturacions', 'FacturacionController');
 
-Route::resource('combos', 'CombosController');
+Route::resource('facturaciones', 'FacturacionesController');
+
+Route::resource('facturaciones', 'FacturacionesController');
+
+Route::resource('facturacions', 'FacturacionsController');
+
+Route::resource('facturacions', 'FacturacionsController');
+
+Route::resource('facturacions', 'FacturacionsController');
+
+Route::resource('facturacions', 'FacturacionsController');
