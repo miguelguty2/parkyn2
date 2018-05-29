@@ -12,7 +12,7 @@
 
 <!-- Hora Ini Field -->
 <div class="form-group">
-    {!! Form::label('hora_ini', 'Hora Inicial:') !!}
+    {!! Form::label('hora_ini', 'Hora Ini:') !!}
     <p>{!! $vehiculos->hora_ini !!}</p>
 </div>
 
@@ -22,15 +22,21 @@
     <p>{!! $vehiculos->fecha !!}</p>
 </div>
 
+<!-- Puestos Id Field -->
+<div class="form-group">
+    {!! Form::label('puestos_id', 'Puestos Id:') !!}
+    <p>{!! $vehiculos->puestos_id !!}</p>
+</div>
+
 <!-- Created At Field -->
 <div class="form-group">
-    {!! Form::label('created_at', 'Creado Por:') !!}
+    {!! Form::label('created_at', 'Created At:') !!}
     <p>{!! $vehiculos->created_at !!}</p>
 </div>
 
 <!-- Updated At Field -->
 <div class="form-group">
-    {!! Form::label('updated_at', 'Actualizado Por:') !!}
+    {!! Form::label('updated_at', 'Updated At:') !!}
     <p>{!! $vehiculos->updated_at !!}</p>
 </div>
 

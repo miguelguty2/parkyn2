@@ -3,7 +3,7 @@
 @section('content')
     <section class="content-header">
         <h1>
-            Prestamos
+            Facturas
         </h1>
    </section>
    <div class="content">
@@ -11,9 +11,9 @@
        <div class="box box-primary">
            <div class="box-body">
                <div class="row">
-                   {!! Form::model($prestamos, ['route' => ['prestamos.update', $prestamos->id], 'method' => 'patch']) !!}
+                   {!! Form::model($facturas, ['route' => ['facturas.update', $facturas->id], 'method' => 'patch']) !!}
 
-                        @include('prestamos.fields')
+                        @include('facturas.fields')
 
                    {!! Form::close() !!}
                </div>

@@ -3,7 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 
-class CreateFacturacionsTable extends Migration
+class CreateFacturasTable extends Migration
 {
 
     /**
@@ -13,19 +13,17 @@ class CreateFacturacionsTable extends Migration
      */
     public function up()
     {
-        Schema::create('facturacions', function (Blueprint $table) {
+        Schema::create('facturas', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('n_factura', 6);
-            $table->date('fecha', 6);
-            $table->time('tiempo', 6);
-            $table->date('Valor_total', 100);
+            $table->char('numero_factura', 10);
+            $table->char('tiempo', 10);
+            $table->time('hora_final', 6);
+            $table->char('total_pagar', 10);
             $table->integer('vehiculos_id')->unsigned();
             $table->integer('users_id')->unsigned();
-            $table->integer('prestamos_id')->unsigned();
             $table->timestamps();
             $table->foreign('vehiculos_id')->references('id')->on('vehiculos');
             $table->foreign('users_id')->references('id')->on('users');
-            $table->foreign('prestamos_id')->references('id')->on('prestamos');
         });
     }
 
@@ -36,6 +34,6 @@ class CreateFacturacionsTable extends Migration
      */
     public function down()
     {
-        Schema::drop('facturacions');
+        Schema::drop('facturas');
     }
 }

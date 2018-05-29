@@ -8,7 +8,7 @@ use InfyOm\Generator\Common\BaseRepository;
 /**
  * Class PuestosRepository
  * @package App\Repositories
- * @version April 28, 2018, 8:57 pm UTC
+ * @version May 25, 2018, 1:05 am UTC
  *
  * @method Puestos findWithoutFail($id, $columns = ['*'])
  * @method Puestos find($id, $columns = ['*'])
@@ -20,6 +20,7 @@ class PuestosRepository extends BaseRepository
      * @var array
      */
     protected $fieldSearchable = [
+        'numero',
         'estado'
     ];
 

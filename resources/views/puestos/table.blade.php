@@ -1,13 +1,15 @@
 <table class="table table-responsive" id="puestos-table">
     <thead>
         <tr>
-            <th>Estado</th>
+            <th>Numero</th>
+        <th>Estado</th>
             <th>Action</th>
         </tr>
     </thead>
     <tbody>
     @foreach($puestos as $puestos)
         <tr>
+            <td>{!! $puestos->numero !!}</td>
             <td>{!! $puestos->estado !!}</td>
             <td>
                 {!! Form::open(['route' => ['puestos.destroy', $puestos->id], 'method' => 'delete']) !!}

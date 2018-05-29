@@ -48,3 +48,17 @@ Route::resource('facturacions', 'FacturacionsController');
 Route::resource('facturacions', 'FacturacionsController');
 
 Route::resource('facturacions', 'FacturacionsController');
+
+Route::resource('puestos', 'PuestosController');
+
+Route::resource('vehiculos', 'VehiculosController');
+
+Route::resource('facturas', 'FacturasController');
+
+Route::resource('facturas', 'FacturasController');
+
+Route::resource('facturas', 'FacturasController');
+
+Route::resource('facturas', 'FacturasController');
+
+Route::resource('facturas', 'FacturasController');

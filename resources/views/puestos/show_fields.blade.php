@@ -4,6 +4,12 @@
     <p>{!! $puestos->id !!}</p>
 </div>
 
+<!-- Numero Field -->
+<div class="form-group">
+    {!! Form::label('numero', 'Numero:') !!}
+    <p>{!! $puestos->numero !!}</p>
+</div>
+
 <!-- Estado Field -->
 <div class="form-group">
     {!! Form::label('estado', 'Estado:') !!}

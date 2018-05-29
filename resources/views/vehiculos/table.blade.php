@@ -2,8 +2,9 @@
     <thead>
         <tr>
             <th>Placa</th>
-        <th>Hora Inicial</th>
+        <th>Hora Ini</th>
         <th>Fecha</th>
+        <th>Puestos Id</th>
             <th>Action</th>
         </tr>
     </thead>
@@ -13,6 +14,7 @@
             <td>{!! $vehiculos->placa !!}</td>
             <td>{!! $vehiculos->hora_ini !!}</td>
             <td>{!! $vehiculos->fecha !!}</td>
+            <td>{!! $vehiculos->puestos_id !!}</td>
             <td>
                 {!! Form::open(['route' => ['vehiculos.destroy', $vehiculos->id], 'method' => 'delete']) !!}
                 <div class='btn-group'>

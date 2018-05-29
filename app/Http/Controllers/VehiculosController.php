@@ -6,6 +6,7 @@ use App\Http\Requests\CreateVehiculosRequest;
 use App\Http\Requests\UpdateVehiculosRequest;
 use App\Repositories\VehiculosRepository;
 use App\Http\Controllers\AppBaseController;
+use App\Models\Puestos;
 use Illuminate\Http\Request;
 use Flash;
 use Prettus\Repository\Criteria\RequestCriteria;
@@ -43,7 +44,9 @@ class VehiculosController extends AppBaseController
      */
     public function create()
     {
-        return view('vehiculos.create');
+        $puestos=Puestos::pluck('numero','id');
+        $datos = ['puestos' => $puestos];
+        return view('vehiculos.create')->with('datos', $datos);
     }
 
     /**
@@ -93,15 +96,18 @@ class VehiculosController extends AppBaseController
      */
     public function edit($id)
     {
+        
         $vehiculos = $this->vehiculosRepository->findWithoutFail($id);
 
         if (empty($vehiculos)) {
             Flash::error('Vehiculos not found');
 
             return redirect(route('vehiculos.index'));
-        }
 
-        return view('vehiculos.edit')->with('vehiculos', $vehiculos);
+        }
+        $puestos=Puestos::pluck('numero','id');
+        $datos = ['puestos' => $puestos ,'vehiculos' => $vehiculos];
+        return view('vehiculos.edit')->with('datos',$datos);
     }
 
     /**

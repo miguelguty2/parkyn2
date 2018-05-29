@@ -3,7 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 
-class CreatePuestosTable extends Migration
+class CreateVehiculosTable extends Migration
 {
 
     /**
@@ -13,10 +13,14 @@ class CreatePuestosTable extends Migration
      */
     public function up()
     {
-        Schema::create('puestos', function (Blueprint $table) {
+        Schema::create('vehiculos', function (Blueprint $table) {
             $table->increments('id');
-            $table->char('estado', 100);
+            $table->char('placa', 6);
+            $table->time('hora_ini', 6);
+            $table->date('fecha', 8);
+            $table->integer('puestos_id')->unsigned();
             $table->timestamps();
+            $table->foreign('puestos_id')->references('id')->on('puestos');
         });
     }
 
@@ -27,6 +31,6 @@ class CreatePuestosTable extends Migration
      */
     public function down()
     {
-        Schema::drop('puestos');
+        Schema::drop('vehiculos');
     }
 }

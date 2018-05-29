@@ -8,8 +8,9 @@ use Eloquent as Model;
 /**
  * Class Puestos
  * @package App\Models
- * @version April 28, 2018, 8:57 pm UTC
+ * @version May 25, 2018, 1:05 am UTC
  *
+ * @property char numero
  * @property char estado
  */
 class Puestos extends Model
@@ -23,6 +24,7 @@ class Puestos extends Model
 
 
     public $fillable = [
+        'numero',
         'estado'
     ];
 
@@ -32,6 +34,7 @@ class Puestos extends Model
      * @var array
      */
     protected $casts = [
+        'numero' => 'string',
         'estado' => 'string'
     ];
 
@@ -41,6 +44,7 @@ class Puestos extends Model
      * @var array
      */
     public static $rules = [
+        'numero' => 'required',
         'estado' => 'required'
     ];
 

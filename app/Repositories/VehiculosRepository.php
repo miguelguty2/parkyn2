@@ -8,7 +8,7 @@ use InfyOm\Generator\Common\BaseRepository;
 /**
  * Class VehiculosRepository
  * @package App\Repositories
- * @version April 28, 2018, 8:25 pm UTC
+ * @version May 25, 2018, 1:16 am UTC
  *
  * @method Vehiculos findWithoutFail($id, $columns = ['*'])
  * @method Vehiculos find($id, $columns = ['*'])
@@ -22,7 +22,8 @@ class VehiculosRepository extends BaseRepository
     protected $fieldSearchable = [
         'placa',
         'hora_ini',
-        'fecha'
+        'fecha',
+        'puestos_id'
     ];
 
     /**
